@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.math.*;
+public class PrimeRange { 
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        IsprimeRange(a);        
+    } 
+    public static void IsprimeRange(int a){
+        for(int i=2;i<=a;i++){
+            if(prime1(i)==true){
+                System.out.println(i);  
+            }
+        }
+      }    
+    public static boolean prime1(int a){
+        if(a==2)
+        {
+            return true;
+        }            
+            for(int i=2;i<=Math.sqrt(a);i++){ 
+                if(a%i==0){       
+                    return false;//we can return the value from the middle of the code also  
+               }             
+            }
+                    return true;  
+        }
+    }
